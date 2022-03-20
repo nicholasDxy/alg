@@ -1,4 +1,6 @@
-package leetcode.binarysearch;
+package leetcode.tree.dfs;
+
+import leetcode.tree.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -6,8 +8,6 @@ import java.util.Deque;
 import java.util.List;
 
 public class Solution_94 {
-
-
 
     public List<Integer> inorderTraversal(TreeNode root) {
         inorderRecursion(root);

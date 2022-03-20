@@ -1,6 +1,6 @@
 package leetcode;
 
-import leetcode.binarysearch.TreeNode;
+import leetcode.tree.TreeNode;
 
 /**
  * 2049. 统计最高分的节点数目
