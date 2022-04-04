@@ -9,9 +9,7 @@ public class MainTest {
     }
 
     public static void main(String[] args) {
-        MainTest mainTest = new MainTest();
-        mainTest.createList();
-        mainTest.print();
+        System.out.println(10+2>>1);
     }
 
     public void createList() {
