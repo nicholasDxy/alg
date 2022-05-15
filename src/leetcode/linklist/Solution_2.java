@@ -53,7 +53,7 @@ public class Solution_2 {
 //
 //    }
 
-    class ListNode {
+    private class ListNode {
         int val;
         ListNode next;
         ListNode() {}
