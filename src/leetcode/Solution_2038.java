@@ -1,6 +1,5 @@
 package leetcode;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 /**
  * 2038. 如果相邻两个颜色均相同则删除当前颜色
