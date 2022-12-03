@@ -5,13 +5,14 @@ package leetcode
  */
 
 fun main() {
-    print(Solution_28().strStr(  "leetcode", "leeto"))
+    print(Solution_28().strStr("qqqqqq", "ccq"))
 }
 
 class Solution_28 {
 
     fun strStr(haystack: String, needle: String): Int {
-        val nextArray = getNextArray(needle)
+//        val nextArrayq = getNextArray(needle)
+        val nextArray = getIntArrayIterate(needle)
         var index1 = 0
         var index2 = 0
         while (index1 < haystack.length && index2 < needle.length) {
@@ -59,6 +60,25 @@ class Solution_28 {
             }
         }
         return 0
+    }
+
+    fun getIntArrayIterate(needle: String): IntArray {
+        val nextArray = IntArray(needle.length)
+        nextArray[0] = -1
+        var preIndex = 0
+        var curIndex = 1
+        while (curIndex < needle.length) {
+            if (preIndex == -1 || needle[preIndex] == needle[curIndex]) {
+                preIndex++
+                curIndex++
+                if (preIndex < needle.length && curIndex < needle.length) {
+                    nextArray[curIndex] = preIndex
+                }
+            } else {
+                preIndex = nextArray[preIndex]
+            }
+        }
+        return nextArray
     }
 
 }
