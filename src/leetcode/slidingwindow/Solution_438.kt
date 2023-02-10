@@ -1,5 +1,7 @@
 package leetcode.slidingwindow
 
+import java.util.*
+
 fun main() {
     val s = "cbaebabacd"
     val p = "abc"
@@ -23,7 +25,7 @@ class Solution_438 {
             val index = s[i] - 'a'
             curWindowCount[index]++
         }
-        if (ifListSame(letterList, curWindowCount)) {
+        if (Arrays.equals(letterList, curWindowCount)) {
             result.add(left)
         }
         left++
@@ -31,7 +33,7 @@ class Solution_438 {
         while (right < s.length) {
             curWindowCount[s[left - 1] - 'a']--
             curWindowCount[s[right] - 'a']++
-            if (ifListSame(letterList, curWindowCount)) {
+            if (Arrays.equals(letterList, curWindowCount)) {
                 result.add(left)
             }
             left++
