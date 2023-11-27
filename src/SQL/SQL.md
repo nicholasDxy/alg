@@ -25,3 +25,7 @@ JOIN table2 ON condition;
 ```
 ![Alt text](image.png)
 
+#### DATEDIFF('2016-09-30', '2012-12-31')
+Sql Server 第二个参数减第一个参数
+MySQL 第一个参数减第二个参数
+
