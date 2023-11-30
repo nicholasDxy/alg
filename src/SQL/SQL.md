@@ -29,3 +29,9 @@ JOIN table2 ON condition;
 Sql Server 第二个参数减第一个参数
 MySQL 第一个参数减第二个参数
 
+#### cross join 笛卡尔积
+```sql
+select student_id, student_name, subject_name
+from Students
+cross join Subjects
+```
