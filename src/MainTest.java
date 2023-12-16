@@ -9,7 +9,9 @@ public class MainTest {
     }
 
     public static void main(String[] args) {
-        System.out.println(10+2>>1);
+//        System.out.println(10+2>>1);
+        SOS s = new SOS();
+        s.combine(4,2);
     }
 
     public void createList() {

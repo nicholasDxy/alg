@@ -35,17 +35,3 @@ select student_id, student_name, subject_name
 from Students
 cross join Subjects
 ```
-
-#### 平均每七天的值：
-用date_sub和between来计算时间段内
-```sql
-SELECT 
-  date, 
-  AVG(number) AS avg_number 
-FROM 
-  your_table_name 
-WHERE 
-  date BETWEEN DATE_SUB(date, INTERVAL 7 DAY) AND date 
-GROUP BY 
-  date
-```
