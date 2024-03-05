@@ -5,6 +5,35 @@ package leetcode;
  * 字符串处理的题要将string转成charArray。提高取字符速度
  */
 public class Solution_5 {
+    public static void main(String[] args) {
+        Solution_5 solution5 = new Solution_5();
+        System.out.println(solution5.longestPalindrome_2round("cbbd"));
+    }
+    public String longestPalindrome_2round(String s) {
+        char[] charList = s.toCharArray();
+        int maxLength = 0;
+        String result  = null;
+        for (int i = 0; i<s.length();i++) {
+            int left = i-1, right =i+1;
+            while(right<s.length() && charList[i] == charList[right]) {
+                right += 1;
+            }
+            while (left>=0 && right<charList.length) {
+                if (charList[left] != charList[right]) {
+                    break;
+                }
+                left--;
+                right++;
+            }
+            int lengthTemp = right - left -1;
+            if (lengthTemp>maxLength) {
+                maxLength = lengthTemp;
+                result = s.substring(left+1,right);
+            }
+        }
+        return result;
+    }
+
     public String longestPalindrome(String s) {
         return violentSolution(s);
     }
