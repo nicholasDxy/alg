@@ -49,3 +49,21 @@ WHERE
 GROUP BY 
   date
 ```
+
+#### round(1.1133,2) 
+保留两位小数
+
+#### order by
+
+#### DATE_FORMAT
+
+```sql
+select DATE_FORMAT(trans_date, '%Y-%m') as month,
+country,
+count(*) as trans_count,
+sum(if(state="approved",1,0)) as approved_count, 
+sum(amount) as trans_total_amount,
+sum(if(state="approved",amount,0)) as approved_total_amount
+from Transactions
+group by month, country
+```
